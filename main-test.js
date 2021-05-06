@@ -2,7 +2,7 @@ const {MongoClient} = require('mongodb');
 
 async function connect() {
   // Connection URL
-  const url = 'mongodb://localhost:27017/my_database'
+  const url = 'mongodb://localhost:27017/test'
 
   let db
 
