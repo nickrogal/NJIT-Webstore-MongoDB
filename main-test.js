@@ -1,6 +1,6 @@
 const {MongoClient} = require('mongodb');
 
-export async function connect() {
+async function connect() {
   // Connection URL
   const url = 'mongodb://localhost:27017/my_database'
 
@@ -18,7 +18,7 @@ export async function connect() {
 }
 
 // Creates catalog colleection with schema validation
-export async function createCollections() {
+async function createCollections() {
     db.createCollections("catalog", {
         validator: { $jsonSchema: {
             bsonType: "object",
@@ -38,7 +38,7 @@ export async function createCollections() {
 }
 
 // Creates the inventory and transactions collections and polulates all of the collections
-export async function insertDocuments (db) {
+async function insertDocuments (db) {
     // Get the documents collection
     const catalog = db.collection('catalog')
     const inventory = db.collection('inventory')
