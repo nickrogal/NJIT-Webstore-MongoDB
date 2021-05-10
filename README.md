@@ -5,5 +5,5 @@
 
 <H5>1. sudo bash install-prereqs.sh</H5>
 <H5>2. mongo </H5>
-<H5>3. > load("webstore-inventory")</H5>
+<H5>3. > load("webstore-inventory.js")</H5>
 <H5>4. > db.catalog.find({name: "Test book"})</H5>
